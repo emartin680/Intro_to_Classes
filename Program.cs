@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,43 +11,41 @@ namespace OBJECTS
         static void Main(string[] args)
         {
             Human aHuman = new Human();
-            Console.WriteLine("The human's name is " + aHuman.getName());
-            aHuman.setName("Andrew");
-            Console.WriteLine("The human's new name is " + aHuman.getName());
+            Console.WriteLine("The human's name is " + aHuman.getfName());
+            aHuman.setfName("Andrew");
+            Console.WriteLine("The human's new name is " + aHuman.getfName());
             Human bHuman = new Human();
-            Console.WriteLine("The human's name is " + bHuman.getName());
-            bHuman.setName("Jason");
-            Console.WriteLine("The human's new name is " + bHuman.getName());
-
+            Console.WriteLine("The human's name is " + bHuman.getfName());
+            bHuman.setfName("Jason");
+            Console.WriteLine("The human's new name is " + bHuman.getfName());
             Console.ReadKey();
         }
     }
 
     class Human
     {
-        //Instance variables
-        string name = "dave";
+        //Instance variables for objects created from this class
+        string fName= "dave";//All instance objects will, by default, have the name "Dave"
+        string surname;
         char gender;
         int age;
-        //Default constructor
+        double height;
+        //Default constructor. Thisconstructor has no parameters.
         public Human() 
         { 
 
         }
 
-        //This is a setter-method for name
-        public void setName(string name)
+        //This is a setter-method for full name which will enable users of the program to change the full name of that particular object
+        public void setfName(string fName)
         {
-            this.name = name;
+            this.fName = fName;
         }
 
-        public string getName()
+        //Thisis a getter method whih will return the value stored against that particular instance variable
+        public string getfName()
         {
-            return name;
+            return fName;
         }
-
-
-
-    }
-   
+    } 
 }
