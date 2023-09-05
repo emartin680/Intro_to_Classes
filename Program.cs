@@ -24,25 +24,25 @@ namespace OBJECTS
 
     class Human
     {
-        //Instance variables for objects created from this class
-        string fName= "dave";//All instance objects will, by default, have the name "Dave"
+        // Instance variables for objects created from this class
+        string fName = "dave"; // All instance objects will, by default, have the name "Dave"
         string surname;
         char gender;
         int age;
         double height;
-        //Default constructor. Thisconstructor has no parameters.
+        // Default constructor. This constructor has no parameters.
         public Human() 
         { 
 
         }
 
-        //This is a setter-method for full name which will enable users of the program to change the full name of that particular object
+        // This is a setter-method for full name which will enable users of the program to change the full name of that particular object
         public void setfName(string fName)
         {
             this.fName = fName;
         }
 
-        //Thisis a getter method whih will return the value stored against that particular instance variable
+        // This is a getter method which will return the value stored against that particular instance variable
         public string getfName()
         {
             return fName;
